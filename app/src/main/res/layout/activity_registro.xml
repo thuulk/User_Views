@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo"
+    tools:context=".RegistroActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="30dp"
+            android:text="Crear cuenta"
+            android:textColor="@color/primario"
+            android:textSize="28sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Completa tus datos para registrarte"
+            android:textColor="@color/text" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:hint="Nombre"
+            app:boxStrokeColor="@color/primario"
+            app:hintTextColor="@color/primario">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/campo_nombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName|textCapWords" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:hint="Correo electrónico"
+            app:boxStrokeColor="@color/primario"
+            app:hintTextColor="@color/primario">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/campo_correo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:hint="Contraseña"
+            app:boxStrokeColor="@color/primario"
+            app:endIconMode="password_toggle"
+            app:hintTextColor="@color/primario">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/campo_contra"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:hint="Verificar contraseña"
+            app:boxStrokeColor="@color/primario"
+            app:endIconMode="password_toggle"
+            app:hintTextColor="@color/primario">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/campo_verificar_contra"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- La fecha se elige con un DatePickerDialog, por eso el campo no es editable a mano -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:hint="Fecha de nacimiento (dd/mm/aaaa)"
+            app:boxStrokeColor="@color/primario"
+            app:hintTextColor="@color/primario">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/campo_fecha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:inputType="none" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn_registrarse"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/primario"
+            android:text="Registrarse"
+            android:textColor="@color/fondo" />
+
+        <TextView
+            android:id="@+id/btn_ir_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="8dp"
+            android:text="¿Ya tienes cuenta? Inicia sesión"
+            android:textAlignment="center"
+            android:textColor="@color/text"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</ScrollView>
